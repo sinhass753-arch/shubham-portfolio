@@ -13,12 +13,27 @@ const links = {
   expense: 'https://github.com/sinhass753-arch/expense-tracker',
 }
 
+
 const skills = [
   { title: 'Languages', icon: Code2, items: ['Java', 'C++', 'Python'] },
   { title: 'Backend', icon: Server, items: ['Spring Boot', 'REST APIs', 'Spring Security'] },
   { title: 'Databases', icon: Database, items: ['MongoDB', 'SQL'] },
-  { title: 'Tools & Concepts', icon: Layers3, items: ['Git', 'GitHub', 'OOP', 'Data Structures & Algorithms'] },
+  { title: 'Tools & Concepts', icon: Layers3, items: ['Git', 'GitHub', 'Data Structures & Algorithms'] },
+  {
+    title: 'System Design',
+    icon: Layers3,
+    items: [
+      'Low-Level Design (LLD)',
+      'High-Level Design (HLD)',
+      'Object-Oriented Design (OOP)',
+      'Design Patterns',
+      'Database Design',
+      'API Design',
+      'Scalability & Distributed Systems'
+    ]
+  }
 ]
+
 
 const projects = [
   {
@@ -173,7 +188,7 @@ function App() {
 
         <section id="skills" className="mx-auto max-w-6xl scroll-mt-24 px-5 py-24 sm:px-8">
           <SectionHeading eyebrow="02 / Toolkit" title="Technologies & skills." description="A snapshot of the tools and concepts I'm learning and using. This list will grow as I build and gain hands-on experience." />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {skills.map(({ title, icon: Icon, items }) => (
               <div key={title} className="card-hover rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6">
                 <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-xl border border-teal-200/15 bg-teal-200/[0.07] text-teal-200"><Icon size={21} /></div>
